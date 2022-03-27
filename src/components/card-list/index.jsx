@@ -1,15 +1,29 @@
-import React from 'react';
-
-import './style.css';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Card from '../card';
 
-export default function CardList(props) {
+const CardListContainer = styled.div`
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+`;
+
+const CardList = ({ monster }) => {
   return (
-    <div className="card-list">
-      {props.monster.map((monster) => (
-        <Card key={monster.id} monster={monster} />
-      ))}
-    </div>
+    <CardListContainer>
+      {monster.map((monster) => {
+        const { name, id, email } = monster;
+        return <Card key={id} id={id} name={name} email={email} />;
+      })}
+    </CardListContainer>
   );
-}
+};
+
+CardList.propTypes = {
+  monster: PropTypes.object.isRequired,
+};
+
+export default CardList;
