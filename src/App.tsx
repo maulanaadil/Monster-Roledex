@@ -1,18 +1,10 @@
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { useState, useEffect, ChangeEvent } from 'react';
+
+import { STitle, SAppContainer } from './style/globalStyle';
 
 import CardList from './components/card-list';
 import SearchBox from './components/search-box';
-
-const AppContainer = styled.div`
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-family: 'Bigelow Rules', cursive;
-  font-size: 72px;
-  color: #0ccac4;
-`;
+import { MonsterProps } from './types/types';
 
 const App = () => {
   const [monster, setMonster] = useState([]);
@@ -26,24 +18,24 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const newFilteredMonster = monster.filter((monster) =>
+    const newFilteredMonster = monster.filter((monster: MonsterProps) =>
       monster.name.toLowerCase().includes(searchField.toLowerCase())
     );
 
     setFilteredMonster(newFilteredMonster);
   }, [monster, searchField]);
 
-  const onSearchChange = (e) => {
+  const onSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     const searchFieldString = e.target.value.toLocaleLowerCase();
     setSearhField(searchFieldString);
   };
 
   return (
-    <AppContainer>
-      <Title>Monster Roledex</Title>
+    <SAppContainer>
+      <STitle>Monster Roledex</STitle>
       <SearchBox placeholder='Search Monster' handleChange={onSearchChange} />
       <CardList monster={filteredMonster}></CardList>
-    </AppContainer>
+    </SAppContainer>
   );
 };
 
