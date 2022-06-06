@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Card should render same snapshots of card list component 1`] = `
+<styled.div>
+  <Card
+    email="nata@test.com"
+    id={1}
+    key="1"
+    name="Nata"
+  />
+  <Card
+    email="eca@test.com"
+    id={2}
+    key="2"
+    name="Eca"
+  />
+  <Card
+    email="vasya@test.com"
+    id={3}
+    key="3"
+    name="Vasya"
+  />
+  <Card
+    email="sabad@test.com"
+    id={4}
+    key="4"
+    name="Sabad"
+  />
+</styled.div>
+`;
