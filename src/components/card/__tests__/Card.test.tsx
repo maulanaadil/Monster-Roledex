@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Card from './index';
+import Card from '../index';
 import 'jest-styled-components';
 
 describe('renders a Card', () => {
@@ -11,7 +11,6 @@ describe('renders a Card', () => {
   };
 
   const wrapper = shallow(<Card {...initProps} />);
-  afterAll(() => wrapper.unmount());
 
   it('should render a card components if props presents', () => {
     expect(wrapper).toHaveStyleRule('background-color', '#95dada');

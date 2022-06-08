@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CardList from './index';
+import CardList from '../index';
 import 'jest-styled-components';
 
 describe('renders a Card', () => {
@@ -28,7 +28,6 @@ describe('renders a Card', () => {
   ];
 
   const wrapper = shallow(<CardList monster={mockMonster} />);
-  afterAll(() => wrapper.unmount());
 
   it('should render a card list component', () => {
     expect(wrapper).toHaveStyleRule('display', 'grid');
