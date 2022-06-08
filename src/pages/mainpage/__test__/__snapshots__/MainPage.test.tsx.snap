@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MainPage page should render same snapshots of MainPage page 1`] = `
+<styled.div>
+  <styled.h1>
+    Monster Roledex
+  </styled.h1>
+  <SearchBox
+    handleChange={[Function]}
+    placeholder="Search Monster"
+  />
+  <CardList
+    monster={Array []}
+  />
+</styled.div>
+`;

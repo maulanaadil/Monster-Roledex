@@ -1,3 +1,3 @@
-import { MonsterProps } from '../../types/types';
+import { MonsterProps } from '@pages/mainpage/types';
 
 export type CardProps = MonsterProps;

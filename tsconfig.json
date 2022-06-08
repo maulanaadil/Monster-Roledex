@@ -21,8 +21,10 @@
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "paths": {
       "@": ["*"],
-      "@Components": ["components"],
-      "@Components/*": ["components/*"]
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["src", "src/config.d.ts"]

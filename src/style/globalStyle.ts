@@ -1,16 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const STitle = styled.h1`
-  font-family: 'Bigelow Rules', cursive;
-  font-size: 72px;
-  color: #0ccac4;
-`;
-
-export const SAppContainer = styled.div`
-  text-align: center;
-`;
-
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -30,3 +20,5 @@ code {
     monospace;
 }
 `;
+
+export default GlobalStyle;
