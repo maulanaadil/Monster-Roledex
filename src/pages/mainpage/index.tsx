@@ -31,7 +31,7 @@ const MainPage = () => {
 
   return (
     <SAppContainer>
-      <STitle>Monster Roledex</STitle>
+      <STitle>Monster Roledex 2</STitle>
       <SearchBox placeholder='Search Monster' handleChange={onSearchChange} />
       <CardList monster={filteredMonster}></CardList>
     </SAppContainer>
